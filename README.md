@@ -1,16 +1,16 @@
 # Introduction
-The goal of this project is to predict sleep states (awake/asleep) based on physiological data such as heart rate (BPM) and time. The dataset used in this analysis contains records of BPM measurements along with corresponding timestamps.
+The goal of this project is to predict sleep states (awake/asleep) based on physiological data such as heart rate (BPM). The dataset used in this analysis contains records of BPM measurements along with corresponding timestamps.
 
 # Dataset
 The dataset (sleep_data.csv) consists of the following columns:
 
 - BPM: Heart rate in beats per minute.
 - Time: Timestamp of the measurement.
-- BPM_change_threshold: A binary indicator (0/1) representing whether there was a significant change in BPM.
+- State: Awake or Asleep based on the ranges.
 
 # Preprocessing
 - Converted time column to timestamp format.
-- Applied a threshold to detect significant changes in BPM and created a binary feature (BPM_change_threshold).
+- Applied a function to handle singular instances of "Asleep" State in a continuous rows of "Awake" State (Vice Versa).
 
 # Modeling
 
